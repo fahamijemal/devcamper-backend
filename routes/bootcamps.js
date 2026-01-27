@@ -1,3 +1,4 @@
+const { getBootcampsInRadius } = require('../controllers/bootcamps');
 const express = require('express');
 const {
     getBootcamps,
@@ -8,6 +9,7 @@ const {
 } = require('../controllers/bootcamps');
 const router = express.Router();
 
+router.route('/radius/:zipcode/:distance').get(getBootcampsInRadius);
 router.
 route('/')
 .get(getBootcamps)
