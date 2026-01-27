@@ -1,0 +1,13 @@
+[
+  {
+    "_id": "5d725a037b292f5f8ceff788",
+    "title": "Full Stack Web Development",
+    "description": "Learn HTML, CSS, JavaScript, Node.js, Express, MongoDB and React",
+    "weeks": "12",
+    "tuition": 8000,
+    "minimumSkill": "intermediate",
+    "scholarshipAvailable": true,
+    "bootcamp": "5d713995b721c3bb38c1f5d0",
+    "user": "5d7a514b5d2c12c7449be045"
+  }
+]
