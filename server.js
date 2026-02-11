@@ -8,6 +8,9 @@ const bootcamps = require('./routes/bootcamps'); //route files
 const courses = require('./routes/courses'); //route files
 const fileupload = require('express-fileupload');
 const path = require('path');
+const auth = require('./routes/auth');
+const cookieParser = require('cookie-parser');
+
 //Load env vars
 dotenv.config({ path: './config/config.env' }); 
 
@@ -36,9 +39,12 @@ app.use(fileupload());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Mount routers
-
 app.use('/api/v1/bootcamps', bootcamps);
 app.use('/api/v1/courses', courses);
+app.use('/api/v1/auth', auth);
+
+// Cookie parser middleware
+app.use(cookieParser());
 
 const PORT = process.env.PORT || 5000;
 
